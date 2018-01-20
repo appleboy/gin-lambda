@@ -1,0 +1,43 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "tHK2INNXUxAY6u3BrRr+flZzh8o=",
+			"path": "github.com/apex/gateway",
+			"revision": "5ae7b7f3bebf9966d0d73b7537ca7daa83124b38",
+			"revisionTime": "2018-01-18T02:43:59Z"
+		},
+		{
+			"checksumSHA1": "WHX/aoJJl8cpgmZF05jRtTMsq10=",
+			"path": "github.com/aws/aws-lambda-go/events",
+			"revision": "0960dfb2f6b6ac1ca4929105ba922e29f7cc3127",
+			"revisionTime": "2018-01-19T07:10:14Z"
+		},
+		{
+			"checksumSHA1": "otXwJhbwKYBj3v0viFbP9Mogqnw=",
+			"path": "github.com/aws/aws-lambda-go/lambda",
+			"revision": "0960dfb2f6b6ac1ca4929105ba922e29f7cc3127",
+			"revisionTime": "2018-01-19T07:10:14Z"
+		},
+		{
+			"checksumSHA1": "FEIW+8VDruQZu0Cv9j7r+Km8r8o=",
+			"path": "github.com/aws/aws-lambda-go/lambda/messages",
+			"revision": "0960dfb2f6b6ac1ca4929105ba922e29f7cc3127",
+			"revisionTime": "2018-01-19T07:10:14Z"
+		},
+		{
+			"checksumSHA1": "+3R+gHl3aC1ZBNfg0dEVBv1roaQ=",
+			"path": "github.com/aws/aws-lambda-go/lambdacontext",
+			"revision": "0960dfb2f6b6ac1ca4929105ba922e29f7cc3127",
+			"revisionTime": "2018-01-19T07:10:14Z"
+		},
+		{
+			"checksumSHA1": "xCv4GBFyw07vZkVtKF/XrUnkHRk=",
+			"path": "github.com/pkg/errors",
+			"revision": "e881fd58d78e04cf6d0de1217f8707c8cc2249bc",
+			"revisionTime": "2017-12-16T07:03:16Z"
+		}
+	],
+	"rootPath": "github.com/appleboy/gin-lambda"
+}
