@@ -9,6 +9,11 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+func helloHandler(c *gin.Context) {
+	name := c.Param("name")
+	c.String(http.StatusOK, "Hello %s", name)
+}
+
 func welcomeHandler(c *gin.Context) {
 	c.String(http.StatusOK, "Hello World from Go")
 }
@@ -30,6 +35,7 @@ func routerEngine() *gin.Engine {
 	r.Use(gin.Recovery())
 
 	r.GET("/welcome", welcomeHandler)
+	r.GET("/user/:name", helloHandler)
 	r.GET("/", rootHandler)
 
 	return r
