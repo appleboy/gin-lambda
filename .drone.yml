@@ -15,6 +15,14 @@ pipeline:
       - apt-get install -y zip
       - zip deployment.zip main
 
+  lambda:
+    image: appleboy/drone-lambda
+    pull: true
+    secrets: [ aws_access_key_id, aws_secret_access_key ]
+    region: ap-southeast-1
+    function_name: gin
+    zip_file: deployment.zip
+
   discord:
     image: appleboy/drone-discord
     pull: true
