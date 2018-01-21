@@ -11,6 +11,7 @@ pipeline:
   zip:
     image: ubuntu:16.04
     commands:
+      - apt-get install -y zip
       - zip deployment.zip main
 
   discord:
