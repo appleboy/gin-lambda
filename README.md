@@ -75,6 +75,37 @@ $ AWS_ACCESS_KEY_ID=xxxx \
   --zip-file deployment.zip
 ```
 
+Output log:
+
+```json
+{
+  CodeSha256: "r/I7yg9tX9MWPsPH337Xk5MIF1dVgkDCFhOrmAYe7hc=",
+  CodeSize: 4334079,
+  Description: "",
+  Environment: {
+    Variables: {
+      PORT: "8080"
+    }
+  },
+  FunctionArn: "arn:aws:lambda:ap-southeast-1:411257254456:function:gin:7",
+  FunctionName: "gin",
+  Handler: "main",
+  LastModified: "2018-01-21T06:21:28.395+0000",
+  MemorySize: 128,
+  Role: "arn:aws:iam::411257254456:role/service-role/test",
+  Runtime: "go1.x",
+  Timeout: 3,
+  TracingConfig: {
+    Mode: "PassThrough"
+  },
+  Version: "7",
+  VpcConfig: {
+    SecurityGroupIds: [],
+    SubnetIds: []
+  }
+}
+```
+
 ## AWS Policy
 
 Add the following AWS policy if you want to integrate with CI/CD tools like Jenkins, GitLab Ci or Drone.
