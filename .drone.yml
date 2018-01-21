@@ -3,11 +3,15 @@ workspace:
   path: github.com/appleboy/gin-lambda
 
 pipeline:
-  lint:
-    image: ubuntu:16.04
-    group: testing
+  build:
+    image: golang:1.9.2
     commands:
-      - make zip
+      - GOOS=linux go build -o main .
+
+  zip:
+    image: ubuntu:16.04
+    commands:
+      - zip deployment.zip main
 
   discord:
     image: appleboy/drone-discord
