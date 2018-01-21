@@ -127,3 +127,31 @@ Add the following AWS policy if you want to integrate with CI/CD tools like Jenk
   ]
 }
 ```
+
+## Benchmark
+
+Memory: 128 MB, Latencies: `6.091282008s`
+
+```
+$ vegeta attack -rate=1024 -duration=10s -targets=target2.txt | tee results.bin | vegeta report
+Requests      [total, rate]            10240, 1024.10
+Duration      [total, attack, wait]    20.335101947s, 9.999018014s, 10.336083933s
+Latencies     [mean, 50, 95, 99, max]  6.091282008s, 4.893951645s, 14.508009942s, 17.11847442s, 20.128384389s
+Bytes In      [total, mean]            143360, 14.00
+Bytes Out     [total, mean]            0, 0.00
+Success       [ratio]                  100.00%
+Status Codes  [code:count]             200:10240
+```
+
+Memory: 512 MB, Latencies: `1.491340336s`
+
+```
+$ vegeta attack -rate=1024 -duration=10s -targets=target2.txt | tee results.bin | vegeta report
+Requests      [total, rate]            10240, 1024.10
+Duration      [total, attack, wait]    11.989730554s, 9.999012371s, 1.990718183s
+Latencies     [mean, 50, 95, 99, max]  1.491340336s, 1.114643849s, 4.112241113s, 6.087949237s, 10.107294516s
+Bytes In      [total, mean]            143360, 14.00
+Bytes Out     [total, mean]            0, 0.00
+Success       [ratio]                  100.00%
+Status Codes  [code:count]             200:10240
+```
