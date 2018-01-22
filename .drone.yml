@@ -8,12 +8,12 @@ pipeline:
     commands:
       - GOOS=linux go build -o main .
 
-  zip:
-    image: ubuntu:16.04
-    commands:
-      - apt-get -y update
-      - apt-get install -y zip
-      - zip deployment.zip main
+  # zip:
+  #   image: ubuntu:16.04
+  #   commands:
+  #     - apt-get -y update
+  #     - apt-get install -y zip
+  #     - zip deployment.zip main
 
   lambda:
     image: appleboy/drone-lambda
@@ -21,7 +21,8 @@ pipeline:
     secrets: [ aws_access_key_id, aws_secret_access_key ]
     region: ap-southeast-1
     function_name: gin
-    zip_file: deployment.zip
+    source:
+      - main
 
   discord:
     image: appleboy/drone-discord
