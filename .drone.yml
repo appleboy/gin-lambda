@@ -8,13 +8,6 @@ pipeline:
     commands:
       - GOOS=linux go build -o main .
 
-  # zip:
-  #   image: ubuntu:16.04
-  #   commands:
-  #     - apt-get -y update
-  #     - apt-get install -y zip
-  #     - zip deployment.zip main
-
   lambda:
     image: appleboy/drone-lambda
     pull: true
