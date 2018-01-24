@@ -89,12 +89,12 @@ Output log:
       PORT: "8080"
     }
   },
-  FunctionArn: "arn:aws:lambda:ap-southeast-1:411257254456:function:gin:7",
+  FunctionArn: "arn:aws:lambda:ap-southeast-1:xxxxxxx:function:gin:7",
   FunctionName: "gin",
   Handler: "main",
   LastModified: "2018-01-21T06:21:28.395+0000",
   MemorySize: 128,
-  Role: "arn:aws:iam::411257254456:role/service-role/test",
+  Role: "arn:aws:iam::xxxxxxx:role/service-role/test",
   Runtime: "go1.x",
   Timeout: 3,
   TracingConfig: {
