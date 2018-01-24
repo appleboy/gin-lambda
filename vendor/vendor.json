@@ -3,10 +3,10 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "tHK2INNXUxAY6u3BrRr+flZzh8o=",
+			"checksumSHA1": "DBuGaMCW5qcB56KbHNMdfpF797Y=",
 			"path": "github.com/apex/gateway",
-			"revision": "5ae7b7f3bebf9966d0d73b7537ca7daa83124b38",
-			"revisionTime": "2018-01-18T02:43:59Z"
+			"revision": "e9c6ccec8851cbed57b52e96858f3dc0572921dc",
+			"revisionTime": "2018-01-21T23:10:47Z"
 		},
 		{
 			"checksumSHA1": "WHX/aoJJl8cpgmZF05jRtTMsq10=",
