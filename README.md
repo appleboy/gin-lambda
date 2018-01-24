@@ -1,5 +1,7 @@
 # gin-lambda
 
+<img src="./images/logo.png" />
+
 running golang using gin framework in AWS Lambda &amp; API Gateway
 
 ## Sample code
