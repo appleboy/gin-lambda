@@ -43,6 +43,7 @@ func routerEngine() *gin.Engine {
 
 func main() {
 	port := os.Getenv("PORT")
+	mode := os.Getenv("MODE")
 	if port == "" {
 		port = "8080"
 	}
@@ -50,5 +51,9 @@ func main() {
 	log.Println("=======================================")
 	log.Println("Runinng gin-lambda server in " + addr)
 	log.Println("=======================================")
-	log.Fatal(gateway.ListenAndServe(addr, routerEngine()))
+	if mode == "production" {
+		log.Fatal(gateway.ListenAndServe(addr, routerEngine()))
+	} else {
+		log.Fatal(http.ListenAndServe(addr, routerEngine()))
+	}
 }
